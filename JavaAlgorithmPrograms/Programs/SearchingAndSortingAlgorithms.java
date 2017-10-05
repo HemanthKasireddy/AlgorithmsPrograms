@@ -140,7 +140,7 @@ public class SearchingAndSortingAlgorithms {
 		String userSearchForString=scanner.next();
 		
 		int low1=0;
-		int high1=insertionsortStringSortedArray.length;
+		int high1=insertionsortStringSortedArray.length-1;
 		
 		long binarysearchStartTimeString=curretnTime();
 		int stringLoc=Utility.binarySearch(insertionsortStringSortedArray, low1, high1, userSearchForString);

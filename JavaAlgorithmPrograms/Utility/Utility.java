@@ -8,6 +8,13 @@ import java.util.Set;
 
 public class Utility {
 	
+	/**
+	 * @param unSortedArray
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for sorting elements using bubble sort technique 
+	 */
+
 	public static <T extends Comparable<T>> T[] bubbleSort(T[] unSortedArray){
 		for(int i=0;i<unSortedArray.length;i++){
 			
@@ -31,6 +38,13 @@ public class Utility {
 		
 	}
 	//prime numbers utility function
+	/**
+	 * @param low
+	 * @param high
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for generating prime numbers
+	 */
 	public static ArrayList<Integer> primeNumbers(int low,int high) {
 		
 		ArrayList<Integer> primeNumbersList=new ArrayList<Integer>();
@@ -52,6 +66,13 @@ public class Utility {
 		return primeNumbersList;
 	}
 	
+	/**
+	 * @param low
+	 * @param high
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for checking prime numbers are palindrome 
+	 */
 	public static ArrayList<Integer> primeNumberPalindrome(int low, int high) {
 		//calling prime numbers method
 		ArrayList<Integer>primeNumbersList  =primeNumbers(low,high);
@@ -85,6 +106,13 @@ public class Utility {
 	}
 
 	//utility function for strings anagram 
+	/**
+	 * @param str1
+	 * @param str2
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for checking given string is anagram or not
+	 */
 	public static boolean checkStringIsAnagram(String str1, String str2) {
 	
 		  if(str1.length()==str2.length()) {
@@ -115,77 +143,13 @@ public class Utility {
 	 else
 	 return false;
 	}
-	/*public static int [] bubbleSortForInteger(int[] unSortedArray){
-		//int []primeArray=new int[primeNumbers.size()];
-		//primeNumbers.toArray(new int[primeNumbers.size()]);
-		for(int i=0;i<unSortedArray.length;i++){
-			
-			boolean isSwaped=false;
-			
-		   for(int j=0;j<unSortedArray.length-i-1;j++){
-		      
-			   if (unSortedArray[j]> unSortedArray[j+1]) {
-		          
-				   int temp = unSortedArray[j];
-				   unSortedArray[j]=unSortedArray[j+1];
-				   unSortedArray[j+1]=temp;
-		           isSwaped=true;
-		          
-		      }  
-		   }
-		   if(isSwaped==false)
-		    	  break;
-		}
-		return unSortedArray;
-		
-	}
-	*/
-	/*public static String[] bubbleSortForStrings(String [] strArray){
-
-		for(int i=0;i<strArray.length;i++){
-			
-			boolean isSwaped=false;
-			
-		   for(int j=0;j<strArray.length-i-1;j++){
-		      
-			   if (strArray[j].compareTo(strArray[j+1])>0) {
-		          
-				   String temp = strArray[j];
-				   strArray[j]=strArray[j+1];
-				   strArray[j+1]=temp;
-		           isSwaped=true;
-		          
-		      }  
-		   }
-		   if(isSwaped==false)
-		    	  break;
-		}
-		
-		return strArray;
-	}
-	*/
-   
-	/*public static int binarySearchForStrings(String[] SortedString, int low, int high, String userSearchForString) {
-		// TODO Auto-generated method stub
-          if(high>=low){
-			
-            int mid = low + (high - low)/2;
-
-            if (SortedString[mid].compareTo(userSearchForString)==0)
-            	return mid;
-            
-            if(SortedString[mid].compareTo(userSearchForString)>0)
-            	
-            	return binarySearchForStrings(SortedString,low,mid-1,userSearchForString);
-            
-            return binarySearchForStrings(SortedString,mid+1,high,userSearchForString);
-		}
-		return -1;
-
-	}*/
-
+	/**
+	 * @param t
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for sorting elements using insertion sort technique  
+	 */
 	public static <T extends Comparable<T>> T[] insertionSort(T[] t) {
-		// TODO Auto-generated method stub
 		for(int i=1;i<t.length;i++){
 			T key=t[i];
 			int j=i-1;
@@ -198,21 +162,15 @@ public class Utility {
 	return t;
 	}
 
-	/*public static int [] insertionSortForInteges(int[] userArray) {
-		// TODO Auto-generated method stub
-		for(int i=1;i<userArray.length;i++){
-			int key=userArray[i];
-			int j=i-1;
-			while(j>=0 && userArray[j]>key){
-				userArray[j+1]=userArray[j];
-				j--;
-				
-			}
-			userArray[j+1]=key;
-		}
-		return userArray;
-	}*/
-
+	/**
+	 * @param t
+	 * @param low
+	 * @param high
+	 * @param userSearch
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for searching elements using binary search technique 
+	 */
 	public static <T extends Comparable<T>> int binarySearch(T[] t,int low,int high, T userSearch) {
 		//sorting the user input array 
 		
@@ -233,6 +191,13 @@ public class Utility {
 
 	}
 	
+	/**
+	 * @param temperatur
+	 * @param check
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for converting temperature celsius to fahrenheit or viceversa
+	 */
 	public static float temperaturConversion(float temperatur, String check){
 		if(check=="c"){
 		      return (temperatur-32f)*( 5f/9f); 
@@ -243,6 +208,14 @@ public class Utility {
 			}
 	}
 	 
+	/**
+	 * @param month
+	 * @param day
+	 * @param year
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for find first day of week 
+	 */
 	public static int findDayOfWeek(int month, int day, int year) {
 		int y = year-(14 - month) / 12;
 		int x = y + y/4-y/100 + y/400;
@@ -253,10 +226,24 @@ public class Utility {
 	}
 	
 	
+	/**
+	 * @param principalAmount
+	 * @param n
+	 * @param r
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for find monthly payment on loan
+	 */
 	public static double monthlyPayment(double principalAmount, double n, double r) {
 		return (principalAmount*r)/(1-Math.pow(1+r, -n));
 		
 	}
+	/**
+	 * @param number
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for find square roots of given number using nuton method
+	 */
 	public static double findSquareRoot(double number) {
 		double epsilon=1e-15;
 		double temp=number;
@@ -267,11 +254,16 @@ public class Utility {
 		return temp;
 	}
 
+	/**
+	 * @param number
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for converting decimal to binary
+	 */
 	public static ArrayList<Integer> convertToBinary(int number) { 
 		ArrayList<Integer> binaryArray=new ArrayList<Integer>();
 		try{
 			int remainder=0;
-			int temp=number;
 			while(number>0){
 				
 				remainder=number%2;
@@ -289,6 +281,13 @@ public class Utility {
 		return binaryArray;
 		
 	}
+	
+	/**
+	 * @param binary
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for converting binary to decimal
+	 */
 	private static int toDecimal(int binary) {
 		  
         int decimal = 0;
@@ -307,6 +306,12 @@ public class Utility {
 		
 	}
 	//checking number is power of two
+	/**
+	 * @param decimalNumber
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for checking whether give number is power of two or not
+	 */
 	private static boolean isPowerOfTwo(int decimalNumber) {
 		if (decimalNumber == 0)
 		    return false;
@@ -318,6 +323,12 @@ public class Utility {
 		  }
 		return true;
 	}
+	/**
+	 * @param binaryArrayList
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for padding extra zeros to make 8 bit binary number
+	 */
 	private static int [] padding(int[] binaryArrayList) {
 
 		int paddingZeros=8-binaryArrayList.length;
@@ -328,6 +339,12 @@ public class Utility {
 		}
 		return paddingArray;
 	}
+	/**
+	 * @param binaryArrayList
+	 * @param number
+	 * @author Hemanth
+	 * <p> This method for displaying binary number after swapping the octels 
+	 */
 	public static void printBinaryArray(ArrayList<Integer> binaryArrayList, int number) {
 		
 		
@@ -382,6 +399,14 @@ public class Utility {
 	}
 	
 
+	/**
+	 * @param unSortedStringArray
+	 * @param low
+	 * @param mid
+	 * @param high
+	 * @author Hemanth
+	 * <p> This method for merging of two strings
+	 */
 	public static void mergeStrings(String [] unSortedStringArray,int low,int mid,int high){
 		
 		int leftLength=mid-low+1;
@@ -429,6 +454,13 @@ public class Utility {
      }
     
 	}
+	/**
+	 * @param unSortedStringArray
+	 * @param low
+	 * @param high
+	 * @author Hemanth
+	 * <p> This method for sorting the strings
+	 */
 	public static void sortStrings(String[] unSortedStringArray,int low,int high){
 		
 		 int mid = low + (high - low) / 2;
@@ -443,6 +475,11 @@ public class Utility {
 	}
 	private static int oneCount,twoCount,fiveCount,tenCount,fiftyCount,hundredCount,fiveHundredCount,thousundCount;
 
+	/**
+	 * @param userAmount
+	 * @author Hemanth
+	 * <p> This method for find required change of given amount
+	 */
 	public static void changeRequired(int userAmount) {
 
 	    try{
@@ -523,6 +560,13 @@ public class Utility {
 			}
 	}
 
+	/**
+	 * @param UserGuesses
+	 * @param low
+	 * @param high
+	 * @author Hemanth
+	 * <p> This method for start the guesser game 
+	 */
 	public static void gameStart(int[] UserGuesses, int low, int high) {
 
 		Scanner scanner= new Scanner(System.in);
